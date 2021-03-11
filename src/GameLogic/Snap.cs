@@ -144,7 +144,6 @@ namespace CardGames.GameLogic
 				 _topCards [0] != null && _topCards [0].Rank == _topCards [1].Rank) // and its a match
 			{
 				_score[player]++;
-				_gameTimer.Stop ();
 				//TODO: consider playing a sound here...
 			}
 			else if (player >= 0 && player < _score.Length) { 
@@ -153,6 +152,7 @@ namespace CardGames.GameLogic
 
 			// stop the game...
 			_started = false;
+			_gameTimer.Stop ();
 		}
 	
 		#region Snap Game Unit Tests
